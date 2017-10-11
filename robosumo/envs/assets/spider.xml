@@ -1,0 +1,160 @@
+<agentbody>
+  <default>
+    <geom conaffinity="1" condim="3" density="5.0" friction="1 0.5 0.5" margin="0.01" rgba="0.8 0.6 0.4 1" material="geom"/>
+    <motor ctrllimited="true" ctrlrange="-1. 1."/>
+  </default>
+  <body name="torso" pos="0 0 0.75">
+    <geom name="torso_geom" pos="0 0 0" size="0.25" type="sphere"/>
+    <joint armature="0" damping="0" limited="false" margin="0.01" name="root" pos="0 0 0" type="free"/>
+    <!-- Back right leg -->
+    <body name="back_right_leg" pos="0 0 0">
+      <geom density="5.0" fromto="0 0 0 -0.056 0.209 0.125" name="aux_1_geom" size="0.04" type="capsule"/>
+      <body name="aux_11" pos="-0.056 0.209 0.125">
+        <joint axis="0 0 1" name="hip_1" pos="0 0 0" range="-20 20" type="hinge"/>
+        <geom density="5.0" fromto="0 0 0 -0.050 0.188 0.113" name="back_right_leg_geom" size="0.04" type="capsule"/>
+        <body name="aux_12" pos="-0.050 0.188 0.113">
+          <joint axis="0.97 0.26 0" name="ankle_1" pos="0 0 0" range="-35 45" type="hinge"/>
+          <geom density="5.0" fromto="0 0 0 -0.112 0.418 -0.600" name="back_right_ankle_geom" size="0.04" type="capsule"/>
+        </body>
+      </body>
+    </body>
+    <!-- Back left leg -->
+    <body name="back_left_leg" pos="0 0 0">
+      <geom density="5.0" fromto="0 0 0 0.056 0.209 0.125" name="aux_2_geom" size="0.04" type="capsule"/>
+      <body name="aux_21" pos="0.056 0.209 0.125">
+        <joint axis="0 0 1" name="hip_2" pos="0 0 0" range="-20 20" type="hinge"/>
+        <geom density="5.0" fromto="0 0 0 0.050 0.188 0.113" name="back_left_leg_geom" size="0.04" type="capsule"/>
+        <body name="aux_22" pos="0.050 0.188 0.113">
+          <joint axis="-0.97 0.26 0" name="ankle_2" pos="0 0 0" range="-45 35" type="hinge"/>
+          <geom density="5.0" fromto="0 0 0 0.112 0.418 -0.600" name="back_left_ankle_geom" size="0.04" type="capsule"/>
+        </body>
+      </body>
+    </body>
+    <!-- Middle-back right leg -->
+    <body name="middle_back_right_leg" pos="0 0 0">
+      <geom density="5.0" fromto="0 0 0 -0.188 0.108 0.125" name="aux_3_geom" size="0.04" type="capsule"/>
+      <body name="aux_31" pos="-0.188 0.108 0.125">
+        <joint axis="0 0 1" name="hip_3" pos="0 0 0" range="-20 20" type="hinge"/>
+        <geom density="5.0" fromto="0 0 0 -0.170 0.097 0.113" name="middle_back_right_leg_geom" size="0.04" type="capsule"/>
+        <body name="aux_32" pos="-0.170 0.097 0.113">
+          <joint axis="0.50 0.87 0" name="ankle_3" pos="0 0 0" range="-35 45" type="hinge"/>
+          <geom density="5.0" fromto="0 0 0 -0.376 0.216 -0.600" name="middle_back_right_ankle_geom" size="0.04" type="capsule"/>
+        </body>
+      </body>
+    </body>
+    <!-- Middle-back right leg -->
+    <body name="middle_back_left_leg" pos="0 0 0">
+      <geom density="5.0" fromto="0 0 0 0.188 0.108 0.125" name="aux_4_geom" size="0.04" type="capsule"/>
+      <body name="aux_41" pos="0.188 0.108 0.125">
+        <joint axis="0 0 1" name="hip_4" pos="0 0 0" range="-20 20" type="hinge"/>
+        <geom density="5.0" fromto="0 0 0 0.170 0.097 0.113" name="middle_back_left_leg_geom" size="0.04" type="capsule"/>
+        <body name="aux_42" pos="0.170 0.097 0.113">
+          <joint axis="-0.50 0.87 0" name="ankle_4" pos="0 0 0" range="-45 35" type="hinge"/>
+          <geom density="5.0" fromto="0 0 0 0.376 0.216 -0.600" name="middle_back_left_ankle_geom" size="0.04" type="capsule"/>
+        </body>
+      </body>
+    </body>
+    <!-- Middle-front right leg -->
+    <body name="middle_front_right_leg" pos="0 0 0">
+      <geom density="5.0" fromto="0 0 0 -0.209 -0.056 0.125" name="aux_5_geom" size="0.04" type="capsule"/>
+      <body name="aux_51" pos="-0.209 -0.056 0.125">
+        <joint axis="0 0 1" name="hip_5" pos="0 0 0" range="-20 20" type="hinge"/>
+        <geom density="5.0" fromto="0 0 0 -0.188 -0.050 0.113" name="middle_front_right_leg_geom" size="0.04" type="capsule"/>
+        <body name="aux_52" pos="-0.188 -0.050 0.113">
+          <joint axis="-0.26 0.97 0" name="ankle_5" pos="0 0 0" range="-35 45" type="hinge"/>
+          <geom density="5.0" fromto="0 0 0 -0.418 -0.112 -0.600" name="middle_front_right_ankle_geom" size="0.04" type="capsule"/>
+        </body>
+      </body>
+    </body>
+    <!-- Middle-front right leg -->
+    <body name="middle_front_left_leg" pos="0 0 0">
+      <geom density="5.0" fromto="0 0 0 0.209 -0.056 0.125" name="aux_6_geom" size="0.04" type="capsule"/>
+      <body name="aux_61" pos="0.209 -0.056 0.125">
+        <joint axis="0 0 1" name="hip_6" pos="0 0 0" range="-20 20" type="hinge"/>
+        <geom density="5.0" fromto="0 0 0 0.188 -0.050 0.113" name="middle_front_left_leg_geom" size="0.04" type="capsule"/>
+        <body name="aux_62" pos="0.188 -0.050 0.113">
+          <joint axis="0.26 0.97 0" name="ankle_6" pos="0 0 0" range="-45 35" type="hinge"/>
+          <geom density="5.0" fromto="0 0 0 0.418 -0.112 -0.600" name="middle_front_left_ankle_geom" size="0.04" type="capsule"/>
+        </body>
+      </body>
+    </body>
+    <!-- Front right leg -->
+    <body name="front_right_leg" pos="0 0 0">
+      <geom density="5.0" fromto="0 0 0 -0.108 -0.188 0.125" name="aux_7_geom" size="0.04" type="capsule"/>
+      <body name="aux_71" pos="-0.108 -0.188 0.125">
+        <joint axis="0 0 1" name="hip_7" pos="0 0 0" range="-20 20" type="hinge"/>
+        <geom density="5.0" fromto="0 0 0 -0.097 -0.170 0.113" name="front_right_leg_geom" size="0.04" type="capsule"/>
+        <body name="aux_72" pos="-0.097 -0.170 0.113">
+          <joint axis="-0.87 0.50 0" name="ankle_7" pos="0 0 0" range="-35 45" type="hinge"/>
+          <geom density="5.0" fromto="0 0 0 -0.216 -0.376 -0.600" name="front_right_ankle_geom" size="0.04" type="capsule"/>
+        </body>
+      </body>
+    </body>
+    <!-- Front left leg -->
+    <body name="front_left_leg" pos="0 0 0">
+      <geom density="5.0" fromto="0 0 0 0.108 -0.188 0.125" name="aux_8_geom" size="0.04" type="capsule"/>
+      <body name="aux_81" pos="0.108 -0.188 0.125">
+        <joint axis="0 0 1" name="hip_8" pos="0 0 0" range="-20 20" type="hinge"/>
+        <geom density="5.0" fromto="0 0 0 0.097 -0.170 0.113" name="front_left_leg_geom" size="0.04" type="capsule"/>
+        <body name="aux_82" pos="0.097 -0.170 0.113">
+          <joint axis="0.87 0.50 0" name="ankle_8" pos="0 0 0" range="-45 35" type="hinge"/>
+          <geom density="5.0" fromto="0 0 0 0.216 -0.376 -0.600" name="front_left_ankle_geom" size="0.04" type="capsule"/>
+        </body>
+      </body>
+    </body>
+  </body>
+  <actuator>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="hip_1" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="ankle_1" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="hip_2" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="ankle_2" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="hip_3" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="ankle_3" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="hip_4" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="ankle_4" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="hip_5" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="ankle_5" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="hip_6" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="ankle_6" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="hip_7" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="ankle_7" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="hip_8" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="ankle_8" gear="150"/>
+  </actuator>
+  <sensor>
+    <!-- Positions -->
+    <jointpos name='pos_hip_1' joint='hip_1' />
+    <jointpos name='pos_hip_2' joint='hip_2' />
+    <jointpos name='pos_hip_3' joint='hip_3' />
+    <jointpos name='pos_hip_4' joint='hip_4' />
+    <jointpos name='pos_hip_5' joint='hip_5' />
+    <jointpos name='pos_hip_6' joint='hip_6' />
+    <jointpos name='pos_hip_7' joint='hip_7' />
+    <jointpos name='pos_hip_8' joint='hip_8' />
+    <jointpos name='pos_ankle_1' joint='ankle_1' />
+    <jointpos name='pos_ankle_2' joint='ankle_2' />
+    <jointpos name='pos_ankle_3' joint='ankle_3' />
+    <jointpos name='pos_ankle_4' joint='ankle_4' />
+    <jointpos name='pos_ankle_5' joint='ankle_5' />
+    <jointpos name='pos_ankle_6' joint='ankle_6' />
+    <jointpos name='pos_ankle_7' joint='ankle_7' />
+    <jointpos name='pos_ankle_8' joint='ankle_8' />
+    <!-- Velocities -->
+    <jointvel name='vel_hip_1'   joint='hip_1' />
+    <jointvel name='vel_hip_2'   joint='hip_2' />
+    <jointvel name='vel_hip_3'   joint='hip_3' />
+    <jointvel name='vel_hip_4'   joint='hip_4' />
+    <jointvel name='vel_hip_5'   joint='hip_5' />
+    <jointvel name='vel_hip_6'   joint='hip_6' />
+    <jointvel name='vel_hip_7'   joint='hip_7' />
+    <jointvel name='vel_hip_8'   joint='hip_8' />
+    <jointvel name='vel_ankle_1' joint='ankle_1' />
+    <jointvel name='vel_ankle_2' joint='ankle_2' />
+    <jointvel name='vel_ankle_3' joint='ankle_3' />
+    <jointvel name='vel_ankle_4' joint='ankle_4' />
+    <jointvel name='vel_ankle_5' joint='ankle_5' />
+    <jointvel name='vel_ankle_6' joint='ankle_6' />
+    <jointvel name='vel_ankle_7' joint='ankle_7' />
+    <jointvel name='vel_ankle_8' joint='ankle_8' />
+  </sensor>
+</agentbody>
