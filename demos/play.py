@@ -79,7 +79,7 @@ def main(env, policy_names, param_versions, max_episodes):
     observation = env.reset()
     print("-" * 5 + "Episode %d " % (num_episodes + 1) + "-" * 5)
     while num_episodes < max_episodes:
-        env.render()
+        env.render(mode='human')
         action = tuple([
             pi.act(stochastic=True, observation=observation[i])[0]
             for i, pi in enumerate(policy)
